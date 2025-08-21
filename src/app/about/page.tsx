@@ -4,21 +4,28 @@ import { useState } from "react";
 import Link from "next/link";
 
 const About = () => {
-  const [comments, setComments] = useState<string[]>([]);
+  // comments ab string[] nahi balki object[] hoga
+  const [comments, setComments] = useState<{ name: string; text: string }[]>([]);
   const [comment, setComment] = useState("");
   const [showComments, setShowComments] = useState(false);
-  const [name, setName] = useState(""); // Track the name input
+  const [name, setName] = useState(""); 
 
   const handlePostComment = () => {
     if (comment.trim()) {
-      setComments([...comments, comment]);
-      setComment("");
-      setShowComments(true); // Show comments section after posting
+      // add new comment object
+      setComments([...comments, { name: name || "Anonymous", text: comment }]);
+
+      // clear input fields
+      setComment(""); 
+      setName("");  
+
+      setShowComments(true); 
     }
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
+      {/* Header */}
       <header className="bg-gray-800 text-white p-6">
         <nav className="flex flex-col sm:flex-row justify-between container mx-auto font-semibold">
           <Link href="/" className="text-3xl font-bold mb-2 sm:mb-0">
@@ -34,11 +41,16 @@ const About = () => {
       </header>
 
       {/* Hero Section */}
-      <div className="relative w-full h-[400px] sm:h-[500px] bg-cover bg-center flex items-center text-white" style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}>
+      <div
+        className="relative w-full h-[400px] sm:h-[500px] bg-cover bg-center flex items-center text-white"
+        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+      >
         <div className="bg-black w-full h-full flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-4xl sm:text-7xl font-bold text-white mt-24 sm:mt-48">About Us</h1>
           <p className="text-lg sm:text-2xl mt-6 sm:mt-12 max-w-4xl text-white">
-            Welcome to BlogApp, your go-to source for insightful articles, trends, and stories. Our mission is to provide engaging and informative content across various topics, helping readers stay updated and inspired.
+            Welcome to BlogApp, your go-to source for insightful articles, trends, and stories.
+            Our mission is to provide engaging and informative content across various topics,
+            helping readers stay updated and inspired.
           </p>
         </div>
       </div>
@@ -47,7 +59,7 @@ const About = () => {
       <div className="container mx-auto p-6 max-w-xl bg-white bg-opacity-5 mt-12 sm:mt-24 rounded-md">
         <h2 className="text-4xl mb-12 mt-4 text-center text-white uppercase font-semibold">Comments</h2>
 
-        {/* Enter Your Name Section */}
+        {/* Enter Your Name */}
         <div className="mb-4">
           <textarea
             value={name}
@@ -80,14 +92,15 @@ const About = () => {
           <div className="space-y-2 bg-gray-100 p-4 rounded-md shadow-md text-black">
             {comments.map((cmt, index) => (
               <div key={index} className="bg-white p-2 rounded-md shadow mb-2">
-                <p className="font-bold">{name || "Anonymous"} </p>
-                <p>{cmt}</p>
+                <p className="font-bold">{cmt.name}</p>
+                <p>{cmt.text}</p>
               </div>
             ))}
           </div>
         )}
       </div>
 
+      {/* Footer */}
       <footer className="bg-gray-900 text-white p-4 text-center mt-12 sm:mt-24">
         <p>&copy; 2025 BlogApp. All rights reserved by Isha Khan.</p>
       </footer>
