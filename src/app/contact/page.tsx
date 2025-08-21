@@ -4,23 +4,15 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black">
       <header className="bg-gray-800 text-white p-6">
-        <nav className="flex flex-col justify-between container mx-auto font-semibold">
-          <Link href="/" className="text-3xl font-bold">
+        <nav className="flex flex-col sm:flex-row justify-between container mx-auto font-semibold">
+          <Link href="/" className="text-3xl font-bold mb-2 sm:mb-0">
             BlogApp
           </Link>
-          <div className="space-x-4 mt-2">
-            <Link href="/" className="hover:text-gray-200">
-              Home
-            </Link>
-            <Link href="/blog" className="hover:text-gray-200">
-              Blog
-            </Link>
-            <Link href="/about" className="hover:text-gray-200">
-              About
-            </Link>
-            <Link href="/contact" className="hover:text-gray-200">
-              Contact
-            </Link>
+          <div className="sm:space-y-0 sm:space-x-4 sm:flex sm:items-center space-x-4">
+            <Link href="/" className="hover:text-gray-200">Home</Link>
+            <Link href="/blog" className="hover:text-gray-200">Blog</Link>
+            <Link href="/about" className="hover:text-gray-200">About</Link>
+            <Link href="/contact" className="hover:text-gray-200">Contact</Link>
           </div>
         </nav>
       </header>
@@ -50,7 +42,7 @@ const Contact = () => {
               <label className="block font-medium mb-1 text-white">Name</label>
               <input
                 type="text"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                 placeholder="Your Name"
               />
             </div>
@@ -59,7 +51,7 @@ const Contact = () => {
               <label className="block font-medium mb-1 text-white">Email</label>
               <input
                 type="email"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                 placeholder="Your Email"
               />
             </div>
@@ -67,7 +59,7 @@ const Contact = () => {
             <div>
               <label className="block font-medium mb-1 text-white">Message</label>
               <textarea
-                className="w-full border rounded-lg px-3 py-2 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border rounded-lg px-3 py-2 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                 placeholder="Your Message"
               ></textarea>
             </div>
