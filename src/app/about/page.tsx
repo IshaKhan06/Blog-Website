@@ -53,7 +53,7 @@ const About = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             rows={1}
-            className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 text-black"
             placeholder="Enter your name..."
           />
         </div>
@@ -64,7 +64,7 @@ const About = () => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             rows={4}
-            className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 text-black"
             placeholder="Write a comment..."
           />
           <button
@@ -77,7 +77,7 @@ const About = () => {
 
         {/* Conditional comment section */}
         {showComments && (
-          <div className="space-y-2 bg-gray-100 p-4 rounded-md shadow-md">
+          <div className="space-y-2 bg-gray-100 p-4 rounded-md shadow-md text-black">
             {comments.map((cmt, index) => (
               <div key={index} className="bg-white p-2 rounded-md shadow mb-2">
                 <p className="font-bold">{name || "Anonymous"} </p>
