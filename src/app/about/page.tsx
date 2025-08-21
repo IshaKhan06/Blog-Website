@@ -29,7 +29,7 @@ const About = () => {
       <header className="bg-gray-800 text-white p-6">
         <nav className="flex flex-col sm:flex-row justify-between container mx-auto font-semibold">
           <Link href="/" className="text-3xl font-bold mb-2 sm:mb-0">
-            BlogApp
+            Tech Blog
           </Link>
           <div className="sm:space-y-0 sm:space-x-4 sm:flex sm:items-center space-x-4">
             <Link href="/" className="hover:text-gray-200">Home</Link>
@@ -48,7 +48,7 @@ const About = () => {
         <div className="bg-black w-full h-full flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-4xl sm:text-7xl font-bold text-white mt-24 sm:mt-48">About Us</h1>
           <p className="text-lg sm:text-2xl mt-6 sm:mt-12 max-w-4xl text-white">
-            Welcome to BlogApp, your go-to source for insightful articles, trends, and stories.
+            Welcome to Tech Blog, your go-to source for insightful articles, trends, and stories.
             Our mission is to provide engaging and informative content across various topics,
             helping readers stay updated and inspired.
           </p>
@@ -102,7 +102,7 @@ const About = () => {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white p-4 text-center mt-12 sm:mt-24">
-        <p>&copy; 2025 BlogApp. All rights reserved by Isha Khan.</p>
+        <p>&copy; 2025 Tech Blog. All rights reserved by Isha Khan.</p>
       </footer>
     </div>
   );

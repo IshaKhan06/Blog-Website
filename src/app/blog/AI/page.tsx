@@ -7,7 +7,7 @@ const AIBlog = () => {
       <header className="bg-gray-800 text-white p-6">
         <nav className="flex justify-between container mx-auto font-semibold">
           <Link href="/" className="text-3xl font-bold">
-            BlogApp
+           Tech Blog
           </Link>
           <div className="space-x-4">
             <Link href="/" className="hover:text-gray-200">
@@ -89,7 +89,7 @@ const AIBlog = () => {
       </div>
 
       <footer className="bg-gray-900 text-white p-4 text-center">
-        <p>&copy; 2025 BlogApp. All rights reserved by Isha Khan.</p>
+        <p>&copy; 2025 Tech Blog. All rights reserved by Isha Khan.</p>
       </footer>
     </div>
   );

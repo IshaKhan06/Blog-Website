@@ -7,7 +7,7 @@ const Blog = () => {
       <header className="bg-gray-800 text-white p-6">
         <nav className="flex flex-col sm:flex-row justify-between container mx-auto font-semibold">
           <Link href="/" className="text-3xl font-bold ">
-            BlogApp
+          Tech Blog
           </Link>
           <div className="space-x-4 mt-2">
             <Link href="/" className="hover:text-gray-200">Home</Link>
@@ -22,7 +22,7 @@ const Blog = () => {
         {/* Hero Section */}
         <div className="relative w-full h-[500px] bg-cover bg-center flex items-center text-black">
           <div className="bg-black w-full h-full flex flex-col justify-center items-center text-center px-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-20">The Blog</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-20">The  Blog</h1>
             <p className="text-xl sm:text-2xl mt-12 text-white">
               This blog provides insights, news, and trends about technology, software development, 
               programming languages, cybersecurity, and the latest innovations in the tech world. 
@@ -102,7 +102,7 @@ const Blog = () => {
       </div>
 
       <footer className="bg-gray-900 text-white p-4 text-center">
-        <p>&copy; 2025 BlogApp. All rights reserved by Isha Khan.</p>
+        <p>&copy; 2025 Tech Blog. All rights reserved by Isha Khan.</p>
       </footer>
     </div>
   );
